@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="styleshoes.css">
+        <script>
+            $(document).ready(function(){
+                $(".imghome").waypoint(function(){
+                    $(".imghome").addClass(
+                        "animate__animated animate__zoomIn"
+                    )
+                });
+            });
+            $(document).ready(function(){
+                $(".get").hover(function(){
+                    $(".get").addClass(
+                        "animate__animated animate__fadeInTopLeft"
+                    )
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="hbi" style="background-color: #9DB2BF; ">
+            <label class="logo" style="font-size: 45px;"><b>Tradewood</b></label>
+            <div class="HPRAC">
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="index.html">Home</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="products.html">Products</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="reviews.html">Reviews</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="about.html">About Us</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="contact.html">Contact </a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="loginpage.html">Login</a>
+            </div>
+        </nav>
+        <div class="Tradewood">
+            <h1>Tradewood</h1>
+        </div>
+        <div class="imghome">
+            <b>
+            <p class="H25">
+                25% OFF
+                <br>
+                HOLIDAY SALE
+            </p>
+            <p class="code">USE CODE : HOLIDAY&56</p></b>
+            <img style="width: 1500px; height: 700px;" src="homepage1.jpg">
+            <img style="width: 1500px; height: 700px;" src="i4.jpg">
+        </div>
+        <p class="get">GET ONE GIFT FREE ON BUY TWO PAIRS OF SHOES</p>
+    </body>
+</html>

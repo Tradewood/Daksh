@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="styleshoes.css">
+        <script>
+            function bigImg(x) {
+              x.style.height = "900px";
+              x.style.width = "850px";
+            }
+            
+            function normalImg(x) {
+              x.style.height = "849px";
+              x.style.width = "815px";
+            }
+            function bigbu(y) {
+                y.style.height = "120px";
+                y.style.width = "300px";
+            }
+            function normalbu(y){
+                y.style.height = "100px";
+                y.style.width = "280px";
+            }
+            $(document).ready(function(){
+                $(".shop").hover(function(){
+                    $(".shop").addClass(
+                        "animate__animated animate__wobble" 
+                    )
+                },{offset:"40%"});
+            });
+            $(document).ready(function(){
+                $(".shoes4").waypoint(function(){
+                    $(".shoes4").addClass(
+                        "animate__animated animate__backInRight" 
+                    )
+                });
+            });
+        </script>
+    </head>
+<body>
+    <div class="hb">
+        <div class="shoescollection">    
+            <p style="margin: 0px 0px 0px 0px;font-size: 150px;font-weight: 500;line-height: 1.2125;color: #0d1f5d;font-family: Inter, 'Source Sans Pro';flex-shrink: 0;">
+                Shoes
+                <br> Collection
+            </p>
+            <div class="bcf">
+               <p class="best">Best In Style</p>
+               <p class="collection">Collection</p>
+               <p class="foryou">For You</p> 
+            </div>
+            <div class="shop" onmouseover="bigbu(this)" onmouseout="normalbu(this)">
+                <a style="text-decoration: none; color: black;" href="homepage.html">Shop Now</a>
+            </div>
+        </div>
+            <img class="shoes4" src="h1.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+    </div>
+</body>
+</html>

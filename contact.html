@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styleshoes.css">
+        <script>
+            $(document).ready(function(){
+                $(".lt").hover(function(){
+                    $(".lt").addClass(
+                        "animate__animated animate__flipInX"
+                    )
+                });
+            });
+            $(document).ready(function(){
+                $(".con1").hover(function(){
+                    $(".con1").addClass(
+                        "animate__animated animate__lightSpeedInLeft"
+                    )
+                });
+            });
+
+            $(document).ready(function () {
+                
+            function validateFname(name) {
+            var namePattern = /^[A-Za-z ]{2,30}$/;
+            return namePattern.test(name);
+            }
+            function validateEmail(email) {
+            var emailPattern = /^[\w\.]+@([\w]+\.)+[\w]{2,4}$/;;
+            return emailPattern.test(email);
+            }
+
+            $('#reg').submit(function (e) {
+                e.preventDefault();
+                var is_valid = true;
+                var fn = $('#fn1').val();
+                if (fn == "") {
+                    $('#fn1_error').html("Fullname is required Field");
+                    $('#fn1_error').css('color', 'red');
+                    is_valid = false;
+                } 
+                else {
+                    if (validateFname(fn)) {
+                        $('#fn1_error').html("");
+                    } 
+                    else {
+                        $('#fn1_error').html("Name contains only letters and minimum length is 2 and maximum length is 30");
+                        $('#fn1_error').css('color', 'red');
+                        is_valid = false;
+                    }
+                }
+
+                var em = $('#email1').val();
+                if (em == "") {
+                    $('#email_error').html("Email is required Field");
+                    $('#email_error').css('color', 'red');
+                    is_valid = false;
+                } else {
+                    if (validateEmail(em)) {
+                        $('#email_error').html("");
+                    } else {
+                        $('#email_error').html("Email is not valid");
+                        $('#email_error').css('color', 'red');
+                    }
+                }
+                
+                if (is_valid) {
+                    this.submit();
+                }
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <nav class="hbi" style="background-color: #9DB2BF;">
+            <label class="logo" style="font-size: 40px;"><b>Tradewood</b></label>
+            <div class="HPRAC">
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="index.html">Home</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="products.html">Products</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="reviews.html">Reviews</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="about.html">About Us</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="contact.html">Contact</a>
+            <a style="color: black; text-decoration: none; padding-left: 25px;" href="loginpage.html">Login</a>
+            </div>
+        </nav>
+        <div class="contact">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="con">
+            <div class="con1">
+                <p style="font-size: 40px; margin-left: -30px;"><b>OUR ADDRESS</b></p><br>
+                <p style="margin-top: -55px;margin-left: -10px;">Tradewood Limited</p><br>
+                <p style="margin-top: -55px;margin-left: -40px;">Umang Tower, 5th Floor,</p><br>
+                <p style="margin-top: -55px;margin-left: -60px;">Mindspace, Off. Link Road,</p><br>
+                <p style="margin-top: -55px;margin-left: -150px;">Malad (West), Mumbai, Maharashtra - 400 064<br></p>
+            </div>
+            <hr style="width: 1430px; color: black; background-color: black; height: 3px;">
+            <form  align="center" style="margin-left: 450px; width: 650px;  text-align: center;" method="get" id="reg" action="homepage.html">
+                <div class="lt">
+                <table style="height: 200px; width: 630px;">
+                    <tr>
+                        <h2 style="font-family: 'Inter', 'Source Sans Pro'; margin-bottom: -10px; margin-top: 10px;">Enter Your Message</h2>
+                    </tr><hr>
+                        <tr>
+                            <td><label for="fn1" style="font-size: 30px;">Enter Your Name</label></td>
+                            <td><input style="font-size: 20px;" type="text" id="fn1" placeholder="Ex.Daksh Bhuva"></td>
+                        </tr>
+                        <tr>
+                            <td><span style="font-size: 20px;" id="fn1_error"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email1" style="font-size: 30px;">Enter Your Email Id</label></td>
+                            <td><input style="font-size: 20px;" type="email" id="email1" placeholder="Ex.dakshbhuva23@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><span style="font-size: 20px;" id="email_error"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label style="font-size: 30px;">Enter Your Message</label></td><br>
+                            <td><input style="font-size: 20px;size: 600px;" type="text" placeholder="Write Message Here" required></td>
+                        </tr>
+                </table><hr>
+                <div class="Login">
+                    <input style="height: 35px; width: 80px; font-size: 25px;" type="submit" id="submit1" value="Login">
+                </div><br>  
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
